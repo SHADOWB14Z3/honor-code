@@ -1,0 +1,39 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Honor Code - Add Course</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div><strong>Honor Code</strong></div>
+    <div>
+        <a href="${pageContext.request.contextPath}/teacher-dashboard">Dashboard</a>
+        <a href="${pageContext.request.contextPath}/logout">Logout</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h2>Create a New Course</h2>
+        <c:if test="${not empty errorMessage}">
+            <div class="alert error">${errorMessage}</div>
+        </c:if>
+
+        <form method="post" action="${pageContext.request.contextPath}/courses">
+            <div class="form-group">
+                <label>Course Title</label>
+                <input type="text" name="title" required>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="5" required></textarea>
+            </div>
+            <button type="submit">Save Course</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
