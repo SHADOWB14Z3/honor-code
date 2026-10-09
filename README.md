@@ -23,7 +23,7 @@ Many colleges need a light system where teachers can publish course content and 
 - Basic validation for empty fields and duplicate usernames
 
 ## 4. Technology Stack
-- Java 17
+- Java 25 LTS
 - Maven
 - JSP
 - Java Servlets
@@ -97,7 +97,7 @@ $env:HONORCODE_DB_PASSWORD = "root"
 ```
 
 ## 8. How to Run
-Install JDK 17, Maven, MySQL, and Apache Tomcat 9. From the project root, build the WAR:
+Install JDK 25, Maven, MySQL, and Apache Tomcat 9. From the project root, build the WAR:
 
 ```powershell
 mvn clean package
